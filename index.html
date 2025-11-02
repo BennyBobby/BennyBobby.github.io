@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mon Portfolio Data & IA</title>
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <a href="#" class="logo">Portfolio</a>
+        <nav class="nav-links">
+            <a href="#presentation">Accueil</a>
+            
+            <div class="dropdown">
+                <button class="dropbtn" onclick="toggleDropdown()">Projets <i class="fa fa-caret-down"></i></button>
+                <div class="dropdown-content" id="projetsDropdown">
+                    <a href="https://github.com/BennyBobby/Brain_tumor_detection" target="_blank">Brain tumour classification</a>
+                    <a href="https://github.com/BennyBobby/Chess_Analysis_Project" target="_blank">Chess Data Analysis</a>
+                    <a href="https://github.com/thomasmaindron/image-captioning" target="_blank">Image Captioning</a>
+                    </div>
+            </div>
+            
+            <a href="https://www.linkedin.com/in/benny-lay/" target="_blank">LinkedIn</a>
+        </nav>
+    </header>
+
+    <section id="presentation" class="hero">
+        <div class="hero-content">
+            <h1>Hello, I am Benny!</h1>
+            <h2>Engineering student specialised in Data and Artificial Intelligence</h2>
+            <p>Welcome to my porfolio in which you will find out my data and AI projects.</p>
+            
+            <a href="assets/LAY_Benny_IA_CV_stage_fin_detude.pdf" download="Mon_CV_Data_[LAY]" class="btn-download">
+                <i class="fa fa-download"></i> Télécharger mon CV
+            </a>
+        </div>
+        <div class="hero-image">
+            <img src="assets/photo_benny.jpg" alt="Photo de profil de Benny Lay" class="profile-pic">
+        </div>
+    </section>
+
+
+    <script src="js/script.js"></script>
+</body>
+</html>
