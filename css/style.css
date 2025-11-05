@@ -1,134 +1,291 @@
 body {
-    font-family: Arial, sans-serif;
-    margin: 0;
-    padding: 0;
-    background-color: #F8F4E3; 
-    color: #333;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-color: #f8f4e3;
+  color: #333;
 }
 
 .navbar {
-    background-color: #583E2E; 
-    color: white;
-    padding: 15px 50px;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
+  background-color: #583e2e;
+  color: white;
+  padding: 15px 50px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+  position: fixed;
+  top: 0;
+  width: 100%;
+  z-index: 1000;
+  box-sizing: border-box;
 }
 .navbar .logo {
-    color: white;
-    font-size: 1.5em;
-    font-weight: bold;
-    text-decoration: none;
+  color: white;
+  font-size: 1.5em;
+  font-weight: bold;
+  text-decoration: none;
 }
 .nav-links a {
-    color: white;
-    text-decoration: none;
-    padding: 14px 20px;
-    display: inline-block;
+  color: white;
+  text-decoration: none;
+  padding: 14px 20px;
+  display: inline-block;
 }
-.nav-links a:hover, .dropbtn:hover {
-    background-color: #6A8E4E; 
+.nav-links a:hover,
+.dropbtn:hover {
+  background-color: #6a8e4e;
 }
-
 
 .dropdown {
-    position: relative;
-    display: inline-block;
+  position: relative;
+  display: inline-block;
 }
 .dropbtn {
-    background-color: #583E2E; 
-    color: white;
-    padding: 14px 20px;
-    font-size: 16px;
-    border: none;
-    cursor: pointer;
+  background-color: #583e2e;
+  color: white;
+  padding: 14px 20px;
+  font-size: 16px;
+  border: none;
+  cursor: pointer;
 }
 .dropdown-content {
-    display: none;
-    position: absolute;
-    background-color: #F8F4E3; 
-    min-width: 160px;
-    box-shadow: 0px 8px 16px 0px rgba(0,0,0,0.2);
-    z-index: 1;
+  display: none;
+  position: absolute;
+  background-color: #f8f4e3;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
 }
 .dropdown-content a {
-    color: #333; 
-    padding: 12px 16px;
-    text-decoration: none;
-    display: block;
-    text-align: left;
+  color: #333;
+  padding: 12px 16px;
+  text-decoration: none;
+  display: block;
+  text-align: left;
 }
 .dropdown-content a:hover {
-    background-color: #EEE0C3;
+  background-color: #eee0c3;
 }
 .show {
-    display: block; 
+  display: block;
 }
-
 
 .hero {
-    padding: 80px 50px;
-    text-align: center;
-    display: flex;
-    align-items: center;
-    justify-content: space-around;
-    background-color: white; 
-    flex-wrap: wrap; 
-    gap: 30px; 
+  padding-top: 100px;
+  padding-bottom: 80px;
+  padding-left: 50px;
+  padding-right: 50px;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  background-color: white;
+  flex-wrap: wrap;
+  gap: 30px;
 }
 .hero-content {
-    max-width: 600px;
-    text-align: left;
-    flex: 1; 
-    min-width: 300px;
+  max-width: 600px;
+  text-align: left;
+  flex: 1;
+  min-width: 300px;
 }
 .hero h1 {
-    color: #6A8E4E; 
-    font-size: 2.5em;
+  color: #6a8e4e;
+  font-size: 2.5em;
 }
 .hero h2 {
-    color: #583E2E; 
-    font-weight: 300;
+  color: #583e2e;
+  font-weight: 300;
 }
 .btn-download {
-    background-color: #B85F2C; 
-    color: white;
-    padding: 12px 25px;
-    text-decoration: none;
-    border-radius: 5px;
-    display: inline-block;
-    margin-top: 20px;
-    transition: background-color 0.3s;
+  background-color: #b85f2c;
+  color: white;
+  padding: 12px 25px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 20px;
+  transition: background-color 0.3s;
 }
 .btn-download:hover {
-    background-color: #8C4721; 
+  background-color: #8c4721;
 }
 .profile-pic {
-    width: 250px; 
-    height: 250px; 
-    border-radius: 50%; 
-    object-fit: cover;
-    border: 5px solid #6A8E4E; 
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+  width: 250px;
+  height: 250px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 5px solid #6a8e4e;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.projets-section {
+  padding: 80px 50px;
+  background-color: #e6e0d4;
+}
+
+.projets-container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.projets-container h1 {
+  text-align: center;
+  color: #583e2e;
+  margin-bottom: 50px;
+  font-size: 2em;
+}
+
+.projet-card {
+  display: flex;
+  background-color: white;
+  border-radius: 10px;
+  margin-bottom: 40px;
+  padding: 30px;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  align-items: center;
+  gap: 40px;
+}
+
+.projet-card.reverse {
+  flex-direction: row-reverse;
+}
+
+.projet-content {
+  flex: 2;
+}
+
+.projet-media {
+  flex: 1;
+  min-width: 250px;
+  max-width: 400px;
+  text-align: center;
+}
+
+.projet-content h2 {
+  color: #6a8e4e;
+  margin-top: 0;
+  border-bottom: 2px solid #f8f4e3;
+  padding-bottom: 10px;
+}
+
+.btn-github {
+  background-color: #333;
+  color: white;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  display: inline-block;
+  margin-top: 15px;
+  transition: background-color 0.3s;
+}
+
+.btn-github:hover {
+  background-color: #555;
+}
+
+.projet-media img,
+.projet-media video {
+  max-width: 100%;
+  height: auto;
+  border-radius: 5px;
+  border: 1px solid #ddd;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+.contact-section {
+  padding: 80px 50px;
+  text-align: center;
+  background-color: white;
+  border-top: 1px solid #eee0c3;
+}
+
+.contact-section h2 {
+  color: #583e2e;
+  margin-bottom: 30px;
+}
+
+.contact-links {
+  margin-top: 40px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.contact-btn {
+  text-decoration: none;
+  color: white;
+  padding: 15px 30px;
+  border-radius: 5px;
+  font-weight: bold;
+  transition: transform 0.2s, box-shadow 0.2s;
+}
+
+.contact-btn i {
+  margin-right: 10px;
+}
+
+.contact-btn.linkedin {
+  background-color: #0077b5;
+}
+.contact-btn.linkedin:hover {
+  background-color: #005582;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn.github {
+  background-color: #333;
+}
+.contact-btn.github:hover {
+  background-color: #555;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.contact-btn.email {
+  background-color: #b85f2c;
+}
+.contact-btn.email:hover {
+  background-color: #8c4721;
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+@media (max-width: 850px) {
+  .projet-card,
+  .projet-card.reverse {
+    flex-direction: column;
+  }
+  .projet-media {
+    order: -1;
+    margin-bottom: 20px;
+  }
 }
 
 @media (max-width: 768px) {
-    .navbar {
-        flex-direction: column;
-    }
-    .nav-links {
-        margin-top: 10px;
-    }
-    .nav-links a, .dropbtn {
-        padding: 10px 15px;
-    }
-    .hero {
-        flex-direction: column;
-        padding: 40px 20px;
-    }
-    .profile-pic {
-        width: 200px; 
-        height: 200px; 
-    }
+  .navbar {
+    flex-direction: column;
+  }
+  .nav-links {
+    margin-top: 10px;
+  }
+  .nav-links a,
+  .dropbtn {
+    padding: 10px 15px;
+  }
+  .hero {
+    flex-direction: column;
+    padding: 40px 20px;
+    padding-top: 150px;
+  }
+  .profile-pic {
+    width: 200px;
+    height: 200px;
+  }
 }

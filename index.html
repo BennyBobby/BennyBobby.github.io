@@ -1,48 +1,166 @@
 <!DOCTYPE html>
 <html lang="fr">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Mon Portfolio Data & IA</title>
-    <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
-</head>
-<body>
-
+    <link rel="stylesheet" href="css/style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+  </head>
+  <body>
     <header class="navbar">
-        <a href="#" class="logo">Portfolio</a>
-        <nav class="nav-links">
-            <a href="#presentation">Accueil</a>
-            
-            <div class="dropdown">
-                <button class="dropbtn" onclick="toggleDropdown()">Projets <i class="fa fa-caret-down"></i></button>
-                <div class="dropdown-content" id="projetsDropdown">
-                    <a href="https://github.com/BennyBobby/Brain_tumor_detection" target="_blank">Brain tumour classification</a>
-                    <a href="https://github.com/BennyBobby/Chess_Analysis_Project" target="_blank">Chess Data Analysis</a>
-                    <a href="https://github.com/thomasmaindron/image-captioning" target="_blank">Image Captioning</a>
-                    </div>
-            </div>
-            
-            <a href="https://www.linkedin.com/in/benny-lay/" target="_blank">LinkedIn</a>
-        </nav>
+      <a href="#" class="logo">Portfolio</a>
+      <nav class="nav-links">
+        <a href="#presentation">Home</a>
+
+        <a href="#projets">Project</a>
+
+        <a href="#contact">Contact</a>
+        >
+      </nav>
     </header>
 
     <section id="presentation" class="hero">
-        <div class="hero-content">
-            <h1>Hello, I am Benny!</h1>
-            <h2>Engineering student specialised in Data and Artificial Intelligence</h2>
-            <p>Welcome to my porfolio in which you will find out my data and AI projects.</p>
-            
-            <a href="assets/LAY_Benny_IA_CV_stage_fin_detude.pdf" download="Mon_CV_Data_[LAY]" class="btn-download">
-                <i class="fa fa-download"></i> Télécharger mon CV
-            </a>
-        </div>
-        <div class="hero-image">
-            <img src="assets/photo_benny.jpg" alt="Photo de profil de Benny Lay" class="profile-pic">
-        </div>
+      <div class="hero-content">
+        <h1>Hello, I am Benny!</h1>
+        <h2>
+          Engineering student specialised in Data and Artificial Intelligence
+        </h2>
+        <p>
+          Welcome to my porfolio in which you will find out my data and AI
+          projects.
+        </p>
+
+        <a
+          href="assets/LAY_Benny_IA_CV_stage_fin_detude.pdf"
+          download="Mon_CV_Data_[LAY]"
+          class="btn-download"
+        >
+          <i class="fa fa-download"></i> Download my resume
+        </a>
+      </div>
+      <div class="hero-image">
+        <img
+          src="assets/photo_benny.jpg"
+          alt="Photo de profil de Benny Lay"
+          class="profile-pic"
+        />
+      </div>
     </section>
 
+    <section id="projets" class="projets-section">
+      <div class="projets-container">
+        <h1>My Data and AI Projects</h1>
+
+        <div class="projet-card">
+          <div class="projet-media"></div>
+          <div class="projet-content">
+            <h2>Brain Tumour Classification</h2>
+            <p>
+              <strong>
+                This project involved the design and implementation of a custom
+                Convolutional Neural Network (CNN) architecture using the
+                PyTorch framework for multi-class brain tumor classification
+                from MRI images, aiming to accurately distinguish between
+                glioma, meningioma, and pituitary tumors, as well as healthy
+                cases.
+              </strong>
+              <br />
+              <br />
+              Following 15 training epochs, the model achieved great diagnostic
+              performance on the validation set, highlighted by:
+              <br />
+              Overall Accuracy: 93.55%
+              <br />
+              F1-Score: 93.46%
+              <br /><br />
+              The sensitivity across critical categories was particularly high:
+              <br />
+              Recall for glioma tumors: 97.13%
+              <br />
+              Recall for pituitary tumors: 94.61%
+              <br />
+              Precision for no tumor (Reliability of Negative): 93.24%
+            </p>
+            <p>
+              <strong>Skills :</strong> Computer Vision, PyTorch, Convolutional
+              Neural Network, Python
+            </p>
+            <a
+              href="https://github.com/BennyBobby/Brain_tumor_detection"
+              target="_blank"
+              class="btn-github"
+              ><i class="fab fa-github"></i> check the project</a
+            >
+          </div>
+        </div>
+
+        <hr />
+        <div class="projet-card reverse">
+          <div class="projet-content">
+            <h2>Chess Data Analysis</h2>
+            <p>
+              <strong>
+                This project is a comprehensive Data Analysis and Visualization
+                initiative focused on extracting insights from a large dataset
+                of player games sourced from Chess.com.
+              </strong>
+              <br /><br />
+              The workflow involved a complete ETL (Extract, Transform, Load)
+              pipeline, beginning with data cleaning and transformation to
+              ensure data quality.
+              <br />
+              The final insights, including key performance indicators (KPIs)
+              and statistical trends, are presented through a series of graphs
+              and interactive data displays.
+              <br />
+              <br />
+              The project culminates in a Streamlit application that serves as
+              an interactive dashboard, allowing users to explore the results
+              dynamically.
+              <br />
+              <br />
+              <strong>Skills:</strong> Pandas, Data Visualization
+              (Seaborn/Matplotlib), Streamlit, ETL.
+            </p>
+            <a
+              href="https://github.com/BennyBobby/Chess_Analysis_Project"
+              target="_blank"
+              class="btn-github"
+              ><i class="fab fa-github"></i> check the project</a
+            >
+          </div>
+          <div class="projet-media"></div>
+        </div>
+      </div>
+    </section>
+
+    <section id="contact" class="contact-section">
+      <h2>Contact</h2>
+      <div class="contact-links">
+        <a
+          href="https://www.linkedin.com/in/benny-lay/"
+          target="_blank"
+          class="contact-btn linkedin"
+        >
+          <i class="fab fa-linkedin"></i> LinkedIn
+        </a>
+        <a
+          href="https://github.com/BennyBobby"
+          target="_blank"
+          class="contact-btn github"
+        >
+          <i class="fab fa-github"></i> GitHub
+        </a>
+        <a href="benny.lay.contact@gmail.com" class="contact-btn email">
+          <i class="fas fa-envelope"></i> Email
+        </a>
+      </div>
+    </section>
 
     <script src="js/script.js"></script>
-</body>
+  </body>
 </html>
