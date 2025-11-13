@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-<html lang="fr">
+<html lang="en">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Mon Portfolio Data & IA</title>
+    <title>My Data and AI Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -19,7 +19,6 @@
         <a href="#projets">Project</a>
 
         <a href="#contact">Contact</a>
-        >
       </nav>
     </header>
 
@@ -35,8 +34,8 @@
         </p>
 
         <a
-          href="assets/LAY_Benny_IA_CV_stage_fin_detude.pdf"
-          download="Mon_CV_Data_[LAY]"
+          href="assets/CV-LAY-Benny-IA-1.pdf"
+          download="Resume_LAY_Benny"
           class="btn-download"
         >
           <i class="fa fa-download"></i> Download my resume
@@ -56,7 +55,6 @@
         <h1>My Data and AI Projects</h1>
 
         <div class="projet-card">
-          <div class="projet-media"></div>
           <div class="projet-content">
             <h2>Brain Tumour Classification</h2>
             <p>
@@ -97,34 +95,85 @@
             >
           </div>
         </div>
-
+        <div class="projet-card">
+          <div class="projet-content">
+            <h2>Image Captioning (CNN-RNN)</h2>
+            <p>
+              <strong>
+                Developed a deep learning model for Image Captioning
+                using a CNN-RNN (Convolutional Neural Network - Recurrent
+                Neural Network) architecture with TensorFlow.
+              </strong>
+              <br /><br />
+              Implemented data preprocessing, tokenization, and metric
+              evaluation pipelines in Python.
+              <br />
+              Trained the model on 20% of the COCO dataset for 20 epochs,
+              achieving the following performance metrics:
+              <br />
+              CIDEr score: 0.433
+              <br />
+              BLEU-4 score: 0.153
+            </p>
+            <p>
+              <strong>Skills :</strong> Artificial Intelligence (AI), Computer
+              Vision, Natural Language Processing (NLP), CNN, RNN, TensorFlow,
+              Deep Learning, Data Processing.
+            </p>
+            <a
+              href="https://github.com/thomasmaindron/image-captioning"
+              target="_blank"
+              class="btn-github"
+              ><i class="fab fa-github"></i> check the project</a
+            >
+          </div>
+        </div>
         <hr />
-        <div class="projet-card reverse">
+        <div class="projet-card">
+ 
+          <div class="projet-content">
+            <h2>Explainable AI (XAI) - Grad-CAM Applications</h2>
+            <p>
+              <strong>
+                Focused on the interpretability of computer vision models using the Grad-CAM (Gradient-weighted Class Activation Mapping) technique.
+              </strong>
+              <br /><br />
+              Applied Grad-CAM to two distinct computer vision tasks to visualise where the models focus their attention:
+              <ul>
+                <li>Image Classification: Used on the ResNet50 architecture to generate heatmaps highlighting discriminant regions for classification decisions.</li>
+                <li>Object Detection: Integrated with YOLOv8 to provide human-understandable visual explanations for bounding box predictions.</li>
+              </ul>
+              This work enhances the trustworthiness of complex deep learning systems.
+            </p>
+            <p>
+              <strong>Skills :</strong> Explainable AI (XAI), Computer Vision, Deep Learning, ResNet, YOLO, Grad-CAM, PyTorch
+            </p>
+            <a
+              href="https://github.com/BennyBobby/XAI"
+              target="_blank"
+              class="btn-github"
+              ><i class="fab fa-github"></i> check the project</a
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="projet-card">
           <div class="projet-content">
             <h2>Chess Data Analysis</h2>
             <p>
               <strong>
-                This project is a comprehensive Data Analysis and Visualization
-                initiative focused on extracting insights from a large dataset
-                of player games sourced from Chess.com.
+                This project is a comprehensive Data Analysis and Visualization initiative focused on extracting insights from a large dataset of player games sourced from Chess.com.
               </strong>
               <br /><br />
-              The workflow involved a complete ETL (Extract, Transform, Load)
-              pipeline, beginning with data cleaning and transformation to
-              ensure data quality.
+              The workflow involved a complete ETL (Extract, Transform, Load) pipeline, beginning with data cleaning and transformation to ensure data quality.
               <br />
-              The final insights, including key performance indicators (KPIs)
-              and statistical trends, are presented through a series of graphs
-              and interactive data displays.
+              The final insights, including key performance indicators (KPIs) and statistical trends, are presented through a series of graphs and interactive data displays.
               <br />
               <br />
-              The project culminates in a Streamlit application that serves as
-              an interactive dashboard, allowing users to explore the results
-              dynamically.
+              The project culminates in a Streamlit application that serves as an interactive dashboard, allowing users to explore the results dynamically.
               <br />
               <br />
-              <strong>Skills:</strong> Pandas, Data Visualization
-              (Seaborn/Matplotlib), Streamlit, ETL.
+              <strong>Skills:</strong> Pandas, Data Visualization (Seaborn/Matplotlib), Streamlit, ETL.
             </p>
             <a
               href="https://github.com/BennyBobby/Chess_Analysis_Project"
@@ -133,7 +182,6 @@
               ><i class="fab fa-github"></i> check the project</a
             >
           </div>
-          <div class="projet-media"></div>
         </div>
       </div>
     </section>
@@ -154,9 +202,11 @@
           class="contact-btn github"
         >
           <i class="fab fa-github"></i> GitHub
-        </a>
-        <a href="benny.lay.contact@gmail.com" class="contact-btn email">
-          <i class="fas fa-envelope"></i> Email
+        <a 
+          href="mailto:benny.lay.contact@gmail.com?subject=Inquiry%20from%20Data%20AI%20Portfolio" 
+          class="contact-btn email"
+        >
+            <i class="fas fa-envelope"></i> Email
         </a>
       </div>
     </section>

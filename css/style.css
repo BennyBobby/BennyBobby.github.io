@@ -138,29 +138,15 @@ body {
 }
 
 .projet-card {
-  display: flex;
   background-color: white;
   border-radius: 10px;
   margin-bottom: 40px;
   padding: 30px;
   box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
-  align-items: center;
-  gap: 40px;
-}
-
-.projet-card.reverse {
-  flex-direction: row-reverse;
 }
 
 .projet-content {
-  flex: 2;
-}
-
-.projet-media {
-  flex: 1;
-  min-width: 250px;
-  max-width: 400px;
-  text-align: center;
+  width: 100%;
 }
 
 .projet-content h2 {
@@ -183,14 +169,6 @@ body {
 
 .btn-github:hover {
   background-color: #555;
-}
-
-.projet-media img,
-.projet-media video {
-  max-width: 100%;
-  height: auto;
-  border-radius: 5px;
-  border: 1px solid #ddd;
 }
 
 html {
@@ -255,17 +233,6 @@ html {
   background-color: #8c4721;
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-}
-
-@media (max-width: 850px) {
-  .projet-card,
-  .projet-card.reverse {
-    flex-direction: column;
-  }
-  .projet-media {
-    order: -1;
-    margin-bottom: 20px;
-  }
 }
 
 @media (max-width: 768px) {
