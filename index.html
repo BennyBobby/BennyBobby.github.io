@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>My Data and AI Portfolio</title>
+    <title>Benny Lay | Data & AI Portfolio</title>
     <link rel="stylesheet" href="css/style.css" />
     <link
       rel="stylesheet"
@@ -12,12 +12,11 @@
   </head>
   <body>
     <header class="navbar">
-      <a href="#" class="logo">Portfolio</a>
+      <a href="#" class="logo">Benny Lay</a>
       <nav class="nav-links">
         <a href="#presentation">Home</a>
-
-        <a href="#projets">Project</a>
-
+        <a href="#about">About</a>
+        <a href="#projets">Projects</a>
         <a href="#contact">Contact</a>
       </nav>
     </header>
@@ -25,68 +24,151 @@
     <section id="presentation" class="hero">
       <div class="hero-content">
         <h1>Hello, I am Benny!</h1>
-        <h2>
-          Engineering student specialised in Data and Artificial Intelligence
-        </h2>
-        <p>
-          Welcome to my porfolio in which you will find out my data and AI
-          projects.
-        </p>
+        <h2>Data Scientist · AI Engineer</h2>
 
-        <a
-          href="assets/CV-LAY-Benny-IA-1.pdf"
-          download="Resume_LAY_Benny"
-          class="btn-download"
-        >
-          <i class="fa fa-download"></i> Download my resume
-        </a>
+        <div class="cv-dropdown-wrapper">
+          <button class="btn-download btn-dropdown-toggle" type="button" onclick="toggleCVDropdown()">
+            <i class="fa fa-download"></i> Download my resume <span class="dropdown-arrow">▾</span>
+          </button>
+          <div class="cv-dropdown" id="cvDropdown">
+            <a href="assets/Resume_LAY_EN.pdf" download="Resume_LAY_Benny_EN" class="cv-option">
+              🇬🇧 English
+            </a>
+            <a href="assets/CV_LAY_FR.pdf" download="CV_LAY_Benny_FR" class="cv-option">
+              🇫🇷 Français
+            </a>
+          </div>
+        </div>
       </div>
       <div class="hero-image">
         <img
           src="assets/photo_benny.jpg"
-          alt="Photo de profil de Benny Lay"
+          alt="Benny Lay profile picture"
           class="profile-pic"
         />
+      </div>
+    </section>
+
+    <section id="about" class="about-section">
+      <div class="about-container">
+        <h2>About Me</h2>
+        <p>
+          I am a final-year engineering student at <strong>ESEO</strong> (Bac+5),
+          specialised in Data Science and Artificial Intelligence. I am currently
+          completing my end-of-study internship in the R&amp;D department at
+          <strong>Aubay</strong>, where I work on applied AI research projects.
+        </p>
+        <p>
+          I am actively looking for my <strong>first permanent position (CDI)</strong>
+          as a <strong>Data Scientist</strong> or <strong>AI Engineer</strong>.
+        </p>
       </div>
     </section>
 
     <section id="projets" class="projets-section">
       <div class="projets-container">
         <h1>My Data and AI Projects</h1>
-
-        <div class="projet-card">
+        <div class="projet-card reveal">
+          <div class="projet-content">
+            <h2>SotaRAG — RAG Research Assistant</h2>
+            <p>
+              End-to-end Retrieval-Augmented Generation (RAG) application that lets
+              users query scientific literature using natural language. The system
+              automatically crawls and indexes ArXiv papers by topic, then answers
+              questions grounded in the retrieved documents.
+            </p>
+            <p>
+              Built a <strong>FastAPI</strong> backend with an async task queue
+              (TaskIQ + Redis) for non-blocking PDF ingestion, a <strong>Qdrant</strong>
+              vector database for semantic search, and <strong>Ollama</strong> for
+              fully offline local LLM inference with streaming responses. Delivered
+              a Streamlit chat UI with real-time token streaming and persistent
+              conversation history. Orchestrated all services with Docker Compose
+              and CI via GitHub Actions.
+            </p>
+            <div class="skill-tags">
+              <span class="tag tag-py">Python</span>
+              <span class="tag tag-api">FastAPI</span>
+              <span class="tag tag-nlp">Qdrant</span>
+              <span class="tag tag-nlp">Ollama</span>
+              <span class="tag tag-front">Streamlit</span>
+              <span class="tag tag-devops">Redis</span>
+              <span class="tag tag-devops">Docker</span>
+              <span class="tag tag-nlp">RAG</span>
+              <span class="tag tag-nlp">NLP</span>
+            </div>
+            <a
+              href="https://github.com/BennyBobby/sotarag"
+              target="_blank"
+              class="btn-github"
+              ><i class="fab fa-github"></i> check the project</a
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="projet-card reveal">
+          <div class="projet-content">
+            <h2>Age Prediction — Deep Learning Web App</h2>
+            <p>
+              Trained a ConvNeXt-Tiny regression model on the UTKFace dataset to
+              predict age from face photos, achieving <strong>MAE = 4.49 years</strong>
+              on the test set. Automated hyperparameter search (learning rate, batch
+              size, weight decay) with Optuna over 15 trials and tracked experiments
+              with TensorBoard.
+            </p>
+            <p>
+              Built a <strong>FastAPI</strong> backend with face detection (OpenCV Haar
+              cascade), Monte Carlo Dropout for 95% confidence intervals, and structured
+              logging. Developed a <strong>React</strong> frontend displaying the detected
+              face crop, predicted age, and confidence range. Wrote 17 pytest tests with
+              CI on GitHub Actions and containerized the full stack with Docker Compose
+              and GPU support.
+            </p>
+            <div class="skill-tags">
+              <span class="tag tag-torch">PyTorch</span>
+              <span class="tag tag-torch">ConvNeXt</span>
+              <span class="tag tag-api">FastAPI</span>
+              <span class="tag tag-front">React</span>
+              <span class="tag tag-devops">Docker</span>
+              <span class="tag tag-optim">Optuna</span>
+              <span class="tag tag-cv">OpenCV</span>
+              <span class="tag tag-test">pytest</span>
+              <span class="tag tag-devops">GitHub Actions</span>
+            </div>
+            <a
+              href="https://github.com/BennyBobby/age_prediction"
+              target="_blank"
+              class="btn-github"
+              ><i class="fab fa-github"></i> check the project</a
+            >
+          </div>
+        </div>
+        <hr />
+        <div class="projet-card reveal">
           <div class="projet-content">
             <h2>Brain Tumour Classification</h2>
             <p>
-              <strong>
-                This project involved the design and implementation of a custom
-                Convolutional Neural Network (CNN) architecture using the
-                PyTorch framework for multi-class brain tumor classification
-                from MRI images, aiming to accurately distinguish between
-                glioma, meningioma, and pituitary tumors, as well as healthy
-                cases.
-              </strong>
+              Designed and implemented a custom CNN architecture using PyTorch for
+              multi-class brain tumor classification from MRI images, distinguishing
+              between glioma, meningioma, pituitary tumors, and healthy cases.
+            </p>
+            <p>
+              Following 15 training epochs, the model achieved:
               <br />
-              <br />
-              Following 15 training epochs, the model achieved great diagnostic
-              performance on the validation set, highlighted by:
-              <br />
-              Overall Accuracy: 93.55%
-              <br />
-              F1-Score: 93.46%
+              <strong>Overall Accuracy: 93.55%</strong> &nbsp;|&nbsp; <strong>F1-Score: 93.46%</strong>
               <br /><br />
-              The sensitivity across critical categories was particularly high:
-              <br />
               Recall for glioma tumors: 97.13%
               <br />
               Recall for pituitary tumors: 94.61%
               <br />
-              Precision for no tumor (Reliability of Negative): 93.24%
+              Precision for no tumor: 93.24%
             </p>
-            <p>
-              <strong>Skills :</strong> Computer Vision, PyTorch, Convolutional
-              Neural Network, Python
-            </p>
+            <div class="skill-tags">
+              <span class="tag tag-cv">Computer Vision</span>
+              <span class="tag tag-torch">PyTorch</span>
+              <span class="tag tag-torch">CNN</span>
+              <span class="tag tag-py">Python</span>
+            </div>
             <a
               href="https://github.com/BennyBobby/Brain_tumor_detection"
               target="_blank"
@@ -95,31 +177,30 @@
             >
           </div>
         </div>
-        <div class="projet-card">
+        <hr />
+        <div class="projet-card reveal">
           <div class="projet-content">
             <h2>Image Captioning (CNN-RNN)</h2>
             <p>
-              <strong>
-                Developed a deep learning model for Image Captioning
-                using a CNN-RNN (Convolutional Neural Network - Recurrent
-                Neural Network) architecture with TensorFlow.
-              </strong>
-              <br /><br />
-              Implemented data preprocessing, tokenization, and metric
-              evaluation pipelines in Python.
-              <br />
-              Trained the model on 20% of the COCO dataset for 20 epochs,
-              achieving the following performance metrics:
-              <br />
-              CIDEr score: 0.433
-              <br />
-              BLEU-4 score: 0.153
+              Developed a deep learning model for automatic image captioning using
+              a CNN-RNN architecture with TensorFlow. Implemented data preprocessing,
+              tokenization, and metric evaluation pipelines in Python.
             </p>
             <p>
-              <strong>Skills :</strong> Artificial Intelligence (AI), Computer
-              Vision, Natural Language Processing (NLP), CNN, RNN, TensorFlow,
-              Deep Learning, Data Processing.
+              Trained on 20% of the COCO dataset for 20 epochs:
+              <br />
+              <strong>CIDEr score: 0.433</strong> &nbsp;|&nbsp; <strong>BLEU-4 score: 0.153</strong>
             </p>
+            <div class="skill-tags">
+              <span class="tag tag-torch">TensorFlow</span>
+              <span class="tag tag-torch">CNN</span>
+              <span class="tag tag-torch">RNN</span>
+              <span class="tag tag-torch">Deep Learning</span>
+              <span class="tag tag-cv">Computer Vision</span>
+              <span class="tag tag-nlp">NLP</span>
+              <span class="tag tag-data">Data Processing</span>
+              <span class="tag tag-py">Python</span>
+            </div>
             <a
               href="https://github.com/thomasmaindron/image-captioning"
               target="_blank"
@@ -129,25 +210,29 @@
           </div>
         </div>
         <hr />
-        <div class="projet-card">
+        <div class="projet-card reveal">
  
           <div class="projet-content">
             <h2>Explainable AI (XAI) - Grad-CAM Applications</h2>
             <p>
-              <strong>
-                Focused on the interpretability of computer vision models using the Grad-CAM (Gradient-weighted Class Activation Mapping) technique.
-              </strong>
-              <br /><br />
-              Applied Grad-CAM to two distinct computer vision tasks to visualise where the models focus their attention:
-              <ul>
-                <li>Image Classification: Used on the ResNet50 architecture to generate heatmaps highlighting discriminant regions for classification decisions.</li>
-                <li>Object Detection: Integrated with YOLOv8 to provide human-understandable visual explanations for bounding box predictions.</li>
-              </ul>
-              This work enhances the trustworthiness of complex deep learning systems.
+              Focused on the interpretability of computer vision models using
+              Grad-CAM (Gradient-weighted Class Activation Mapping).
+              Applied it to two distinct tasks to visualise where models focus their attention:
             </p>
-            <p>
-              <strong>Skills :</strong> Explainable AI (XAI), Computer Vision, Deep Learning, ResNet, YOLO, Grad-CAM, PyTorch
-            </p>
+            <ul>
+              <li>Image Classification: Used on the ResNet50 architecture to generate heatmaps highlighting discriminant regions for classification decisions.</li>
+              <li>Object Detection: Integrated with YOLOv8 to provide human-understandable visual explanations for bounding box predictions.</li>
+            </ul>
+            <p>This work enhances the trustworthiness of complex deep learning systems.</p>
+            <div class="skill-tags">
+              <span class="tag tag-cv">Explainable AI</span>
+              <span class="tag tag-cv">Computer Vision</span>
+              <span class="tag tag-torch">Deep Learning</span>
+              <span class="tag tag-torch">ResNet</span>
+              <span class="tag tag-cv">YOLO</span>
+              <span class="tag tag-cv">Grad-CAM</span>
+              <span class="tag tag-torch">PyTorch</span>
+            </div>
             <a
               href="https://github.com/BennyBobby/XAI"
               target="_blank"
@@ -157,24 +242,32 @@
           </div>
         </div>
         <hr />
-        <div class="projet-card">
+        <div class="projet-card reveal">
           <div class="projet-content">
-            <h2>Chess Data Analysis</h2>
+            <h2>Chess Game Analytics Dashboard</h2>
             <p>
-              <strong>
-                This project is a comprehensive Data Analysis and Visualization initiative focused on extracting insights from a large dataset of player games sourced from Chess.com.
-              </strong>
-              <br /><br />
-              The workflow involved a complete ETL (Extract, Transform, Load) pipeline, beginning with data cleaning and transformation to ensure data quality.
-              <br />
-              The final insights, including key performance indicators (KPIs) and statistical trends, are presented through a series of graphs and interactive data displays.
-              <br />
-              <br />
-              The project culminates in a Streamlit application that serves as an interactive dashboard, allowing users to explore the results dynamically.
-              <br />
-              <br />
-              <strong>Skills:</strong> Pandas, Data Visualization (Seaborn/Matplotlib), Streamlit, ETL.
+              Full-stack data analytics web app that fetches, stores, and visualizes
+              Chess.com game history for any player. Built an ETL pipeline in Python
+              to extract data from the Chess.com public REST API, normalize it with
+              pandas, and persist it in SQLite with incremental ingestion and deduplication.
             </p>
+            <p>
+              Delivered an <strong>interactive Streamlit dashboard</strong> showing
+              rating trends, opening performance, win/loss rates, and opponent strength
+              across game modes (Blitz, Bullet, Rapid). Containerized with
+              <strong>Docker Compose</strong>, covered with pytest unit tests, and
+              deployed via a <strong>GitHub Actions CI/CD</strong> pipeline.
+            </p>
+            <div class="skill-tags">
+              <span class="tag tag-py">Python</span>
+              <span class="tag tag-front">Streamlit</span>
+              <span class="tag tag-data">pandas</span>
+              <span class="tag tag-data">SQLite</span>
+              <span class="tag tag-devops">Docker</span>
+              <span class="tag tag-devops">GitHub Actions</span>
+              <span class="tag tag-api">REST API</span>
+              <span class="tag tag-data">ETL</span>
+            </div>
             <a
               href="https://github.com/BennyBobby/Chess_Analysis_Project"
               target="_blank"
@@ -188,6 +281,9 @@
 
     <section id="contact" class="contact-section">
       <h2>Contact</h2>
+      <p class="contact-intro">
+        Open to opportunities — feel free to reach out!
+      </p>
       <div class="contact-links">
         <a
           href="https://www.linkedin.com/in/benny-lay/"
@@ -202,7 +298,8 @@
           class="contact-btn github"
         >
           <i class="fab fa-github"></i> GitHub
-        <a 
+        </a>
+        <a
           href="mailto:benny.lay.contact@gmail.com?subject=Inquiry%20from%20Data%20AI%20Portfolio" 
           class="contact-btn email"
         >

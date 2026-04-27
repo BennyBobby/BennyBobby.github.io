@@ -37,39 +37,6 @@ body {
   background-color: #6a8e4e;
 }
 
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-.dropbtn {
-  background-color: #583e2e;
-  color: white;
-  padding: 14px 20px;
-  font-size: 16px;
-  border: none;
-  cursor: pointer;
-}
-.dropdown-content {
-  display: none;
-  position: absolute;
-  background-color: #f8f4e3;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-.dropdown-content a {
-  color: #333;
-  padding: 12px 16px;
-  text-decoration: none;
-  display: block;
-  text-align: left;
-}
-.dropdown-content a:hover {
-  background-color: #eee0c3;
-}
-.show {
-  display: block;
-}
 
 .hero {
   padding-top: 100px;
@@ -105,11 +72,49 @@ body {
   text-decoration: none;
   border-radius: 5px;
   display: inline-block;
-  margin-top: 20px;
   transition: background-color 0.3s;
+  border: none;
+  font-size: 1em;
+  font-family: inherit;
+  cursor: pointer;
 }
 .btn-download:hover {
   background-color: #8c4721;
+}
+.cv-dropdown-wrapper {
+  position: relative;
+  display: inline-block;
+  margin-top: 20px;
+}
+.dropdown-arrow {
+  font-size: 0.85em;
+  margin-left: 4px;
+}
+.cv-dropdown {
+  display: none;
+  position: absolute;
+  top: calc(100% + 6px);
+  left: 0;
+  background: white;
+  border-radius: 5px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+  min-width: 100%;
+  z-index: 100;
+  overflow: hidden;
+}
+.cv-dropdown.open {
+  display: block;
+}
+.cv-option {
+  display: block;
+  padding: 11px 20px;
+  color: #333;
+  text-decoration: none;
+  font-size: 0.95em;
+  transition: background-color 0.2s;
+}
+.cv-option:hover {
+  background-color: #f8f4e3;
 }
 .profile-pic {
   width: 250px;
@@ -118,6 +123,30 @@ body {
   object-fit: cover;
   border: 5px solid #6a8e4e;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.about-section {
+  padding: 80px 50px;
+  background-color: white;
+  border-top: 1px solid #eee0c3;
+}
+
+.about-container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.about-container h2 {
+  color: #583e2e;
+  font-size: 2em;
+  margin-bottom: 30px;
+}
+
+.about-container p {
+  font-size: 1.05em;
+  line-height: 1.8;
+  color: #444;
+  margin-bottom: 16px;
 }
 
 .projets-section {
@@ -184,7 +213,13 @@ html {
 
 .contact-section h2 {
   color: #583e2e;
-  margin-bottom: 30px;
+  margin-bottom: 10px;
+}
+
+.contact-intro {
+  color: #666;
+  font-size: 1.05em;
+  margin-bottom: 10px;
 }
 
 .contact-links {
@@ -234,6 +269,42 @@ html {
   transform: translateY(-2px);
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
+
+/* Scroll reveal */
+.reveal {
+  opacity: 0;
+  transform: translateY(30px);
+  transition: opacity 0.6s ease, transform 0.6s ease;
+}
+.reveal.visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Skill badges */
+.skill-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 15px;
+}
+.tag {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 0.8em;
+  font-weight: 600;
+  color: white;
+}
+.tag-py     { background-color: #3b82f6; }
+.tag-torch  { background-color: #ef4444; }
+.tag-api    { background-color: #0d9488; }
+.tag-front  { background-color: #06b6d4; }
+.tag-data   { background-color: #8b5cf6; }
+.tag-devops { background-color: #475569; }
+.tag-cv     { background-color: #16a34a; }
+.tag-nlp    { background-color: #6366f1; }
+.tag-test   { background-color: #d97706; }
+.tag-optim  { background-color: #f97316; }
 
 @media (max-width: 768px) {
   .navbar {
