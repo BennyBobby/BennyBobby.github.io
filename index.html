@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
@@ -27,14 +27,27 @@
         <h2>Data Scientist · AI Engineer</h2>
 
         <div class="cv-dropdown-wrapper">
-          <button class="btn-download btn-dropdown-toggle" type="button" onclick="toggleCVDropdown()">
-            <i class="fa fa-download"></i> Download my resume <span class="dropdown-arrow">▾</span>
+          <button
+            class="btn-download btn-dropdown-toggle"
+            type="button"
+            onclick="toggleCVDropdown()"
+          >
+            <i class="fa fa-download"></i> Download my resume
+            <span class="dropdown-arrow">▾</span>
           </button>
           <div class="cv-dropdown" id="cvDropdown">
-            <a href="assets/Resume_LAY_EN.pdf" download="Resume_LAY_Benny_EN" class="cv-option">
+            <a
+              href="assets/Resume_LAY_EN.pdf"
+              download="Resume_LAY_Benny_EN"
+              class="cv-option"
+            >
               🇬🇧 English
             </a>
-            <a href="assets/CV_LAY_FR.pdf" download="CV_LAY_Benny_FR" class="cv-option">
+            <a
+              href="assets/CV_LAY_FR.pdf"
+              download="CV_LAY_Benny_FR"
+              class="cv-option"
+            >
               🇫🇷 Français
             </a>
           </div>
@@ -53,14 +66,17 @@
       <div class="about-container">
         <h2>About Me</h2>
         <p>
-          I am a final-year engineering student at <strong>ESEO</strong> (Bac+5),
-          specialised in Data Science and Artificial Intelligence. I am currently
-          completing my end-of-study internship in the R&amp;D department at
-          <strong>Aubay</strong>, where I work on applied AI research projects.
+          I am a final-year engineering student at
+          <strong>ESEO</strong> (Bac+5), specialised in Data Science and
+          Artificial Intelligence. I am currently completing my end-of-study
+          internship in the R&amp;D department at <strong>Aubay</strong>, where
+          I work on applied AI research projects.
         </p>
         <p>
-          I am actively looking for my <strong>first permanent position (CDI)</strong>
-          as a <strong>Data Scientist</strong> or <strong>AI Engineer</strong>.
+          I am actively looking for my
+          <strong>first permanent position (CDI)</strong> as a
+          <strong>Data Scientist</strong> or <strong>AI Engineer</strong>,
+          as well as a <strong>PhD thesis in Artificial Intelligence</strong>.
         </p>
       </div>
     </section>
@@ -72,19 +88,19 @@
           <div class="projet-content">
             <h2>SotaRAG — RAG Research Assistant</h2>
             <p>
-              End-to-end Retrieval-Augmented Generation (RAG) application that lets
-              users query scientific literature using natural language. The system
-              automatically crawls and indexes ArXiv papers by topic, then answers
-              questions grounded in the retrieved documents.
+              End-to-end Retrieval-Augmented Generation (RAG) application that
+              lets users query scientific literature using natural language. The
+              system automatically crawls and indexes ArXiv papers by topic,
+              then answers questions grounded in the retrieved documents.
             </p>
             <p>
               Built a <strong>FastAPI</strong> backend with an async task queue
-              (TaskIQ + Redis) for non-blocking PDF ingestion, a <strong>Qdrant</strong>
-              vector database for semantic search, and <strong>Ollama</strong> for
-              fully offline local LLM inference with streaming responses. Delivered
-              a Streamlit chat UI with real-time token streaming and persistent
-              conversation history. Orchestrated all services with Docker Compose
-              and CI via GitHub Actions.
+              (TaskIQ + Redis) for non-blocking PDF ingestion, a
+              <strong>Qdrant</strong> vector database for semantic search, and
+              <strong>Ollama</strong> for fully offline local LLM inference with
+              streaming responses. Delivered a Streamlit chat UI with real-time
+              token streaming and persistent conversation history. Orchestrated
+              all services with Docker Compose and CI via GitHub Actions.
             </p>
             <div class="skill-tags">
               <span class="tag tag-py">Python</span>
@@ -111,18 +127,20 @@
             <h2>Age Prediction — Deep Learning Web App</h2>
             <p>
               Trained a ConvNeXt-Tiny regression model on the UTKFace dataset to
-              predict age from face photos, achieving <strong>MAE = 4.49 years</strong>
-              on the test set. Automated hyperparameter search (learning rate, batch
-              size, weight decay) with Optuna over 15 trials and tracked experiments
-              with TensorBoard.
+              predict age from face photos, achieving
+              <strong>MAE = 4.49 years</strong>
+              on the test set. Automated hyperparameter search (learning rate,
+              batch size, weight decay) with Optuna over 15 trials and tracked
+              experiments with TensorBoard.
             </p>
             <p>
-              Built a <strong>FastAPI</strong> backend with face detection (OpenCV Haar
-              cascade), Monte Carlo Dropout for 95% confidence intervals, and structured
-              logging. Developed a <strong>React</strong> frontend displaying the detected
-              face crop, predicted age, and confidence range. Wrote 17 pytest tests with
-              CI on GitHub Actions and containerized the full stack with Docker Compose
-              and GPU support.
+              Built a <strong>FastAPI</strong> backend with face detection
+              (OpenCV Haar cascade), Monte Carlo Dropout for 95% confidence
+              intervals, and structured logging. Developed a
+              <strong>React</strong> frontend displaying the detected face crop,
+              predicted age, and confidence range. Wrote 17 pytest tests with CI
+              on GitHub Actions and containerized the full stack with Docker
+              Compose and GPU support.
             </p>
             <div class="skill-tags">
               <span class="tag tag-torch">PyTorch</span>
@@ -148,15 +166,16 @@
           <div class="projet-content">
             <h2>Brain Tumour Classification</h2>
             <p>
-              Designed and implemented a custom CNN architecture using PyTorch for
-              multi-class brain tumor classification from MRI images, distinguishing
-              between glioma, meningioma, pituitary tumors, and healthy cases.
+              Designed and implemented a custom CNN architecture using PyTorch
+              for multi-class brain tumor classification from MRI images,
+              distinguishing between glioma, meningioma, pituitary tumors, and
+              healthy cases.
             </p>
             <p>
               Following 15 training epochs, the model achieved:
               <br />
-              <strong>Overall Accuracy: 93.55%</strong> &nbsp;|&nbsp; <strong>F1-Score: 93.46%</strong>
-              <br /><br />
+              <strong>Overall Accuracy: 93.55%</strong> &nbsp;|&nbsp;
+              <strong>F1-Score: 93.46%</strong> <br /><br />
               Recall for glioma tumors: 97.13%
               <br />
               Recall for pituitary tumors: 94.61%
@@ -182,14 +201,16 @@
           <div class="projet-content">
             <h2>Image Captioning (CNN-RNN)</h2>
             <p>
-              Developed a deep learning model for automatic image captioning using
-              a CNN-RNN architecture with TensorFlow. Implemented data preprocessing,
-              tokenization, and metric evaluation pipelines in Python.
+              Developed a deep learning model for automatic image captioning
+              using a CNN-RNN architecture with TensorFlow. Implemented data
+              preprocessing, tokenization, and metric evaluation pipelines in
+              Python.
             </p>
             <p>
               Trained on 20% of the COCO dataset for 20 epochs:
               <br />
-              <strong>CIDEr score: 0.433</strong> &nbsp;|&nbsp; <strong>BLEU-4 score: 0.153</strong>
+              <strong>CIDEr score: 0.433</strong> &nbsp;|&nbsp;
+              <strong>BLEU-4 score: 0.153</strong>
             </p>
             <div class="skill-tags">
               <span class="tag tag-torch">TensorFlow</span>
@@ -211,19 +232,30 @@
         </div>
         <hr />
         <div class="projet-card reveal">
- 
           <div class="projet-content">
             <h2>Explainable AI (XAI) - Grad-CAM Applications</h2>
             <p>
               Focused on the interpretability of computer vision models using
-              Grad-CAM (Gradient-weighted Class Activation Mapping).
-              Applied it to two distinct tasks to visualise where models focus their attention:
+              Grad-CAM (Gradient-weighted Class Activation Mapping). Applied it
+              to two distinct tasks to visualise where models focus their
+              attention:
             </p>
             <ul>
-              <li>Image Classification: Used on the ResNet50 architecture to generate heatmaps highlighting discriminant regions for classification decisions.</li>
-              <li>Object Detection: Integrated with YOLOv8 to provide human-understandable visual explanations for bounding box predictions.</li>
+              <li>
+                Image Classification: Used on the ResNet50 architecture to
+                generate heatmaps highlighting discriminant regions for
+                classification decisions.
+              </li>
+              <li>
+                Object Detection: Integrated with YOLOv8 to provide
+                human-understandable visual explanations for bounding box
+                predictions.
+              </li>
             </ul>
-            <p>This work enhances the trustworthiness of complex deep learning systems.</p>
+            <p>
+              This work enhances the trustworthiness of complex deep learning
+              systems.
+            </p>
             <div class="skill-tags">
               <span class="tag tag-cv">Explainable AI</span>
               <span class="tag tag-cv">Computer Vision</span>
@@ -244,19 +276,58 @@
         <hr />
         <div class="projet-card reveal">
           <div class="projet-content">
-            <h2>Chess Game Analytics Dashboard</h2>
+            <h2>Continual Fine-Tuning of Small Language Models</h2>
             <p>
-              Full-stack data analytics web app that fetches, stores, and visualizes
-              Chess.com game history for any player. Built an ETL pipeline in Python
-              to extract data from the Chess.com public REST API, normalize it with
-              pandas, and persist it in SQLite with incremental ingestion and deduplication.
+              Compared five strategies for mitigating catastrophic forgetting
+              when sequentially fine-tuning Qwen2-0.5B on quarterly batches of
+              ArXiv abstracts (cs.LG + cs.CL, 2024). Implemented Naive, EWC,
+              LoRA + Replay, and Orthogonal LoRA (O-LoRA) from scratch using
+              PyTorch and HuggingFace.
             </p>
             <p>
-              Delivered an <strong>interactive Streamlit dashboard</strong> showing
-              rating trends, opening performance, win/loss rates, and opponent strength
+              Perplexity on batch_01 after 4 sequential training steps:
+              <br />
+              <strong>Naive: 5.14</strong> &nbsp;|&nbsp;
+              <strong>LoRA + Replay: 3.66</strong> &nbsp;|&nbsp;
+              <strong>O-LoRA: 3.70</strong>
+            </p>
+            <div class="skill-tags">
+              <span class="tag tag-torch">PyTorch</span>
+              <span class="tag tag-nlp">HuggingFace</span>
+              <span class="tag tag-nlp">Continual Learning</span>
+              <span class="tag tag-nlp">LoRA</span>
+              <span class="tag tag-nlp">LLM</span>
+              <span class="tag tag-nlp">NLP</span>
+              <span class="tag tag-data">Data Processing</span>
+              <span class="tag tag-py">Python</span>
+            </div>
+            <a
+              href="https://github.com/BennyBobby/ft_slm"
+              target="_blank"
+              class="btn-github"
+              ><i class="fab fa-github"></i> check the project</a
+            >
+          </div>
+        </div>
+
+        <hr />
+        <div class="projet-card reveal">
+          <div class="projet-content">
+            <h2>Chess Game Analytics Dashboard</h2>
+            <p>
+              Full-stack data analytics web app that fetches, stores, and
+              visualizes Chess.com game history for any player. Built an ETL
+              pipeline in Python to extract data from the Chess.com public REST
+              API, normalize it with pandas, and persist it in SQLite with
+              incremental ingestion and deduplication.
+            </p>
+            <p>
+              Delivered an
+              <strong>interactive Streamlit dashboard</strong> showing rating
+              trends, opening performance, win/loss rates, and opponent strength
               across game modes (Blitz, Bullet, Rapid). Containerized with
-              <strong>Docker Compose</strong>, covered with pytest unit tests, and
-              deployed via a <strong>GitHub Actions CI/CD</strong> pipeline.
+              <strong>Docker Compose</strong>, covered with pytest unit tests,
+              and deployed via a <strong>GitHub Actions CI/CD</strong> pipeline.
             </p>
             <div class="skill-tags">
               <span class="tag tag-py">Python</span>
@@ -300,10 +371,10 @@
           <i class="fab fa-github"></i> GitHub
         </a>
         <a
-          href="mailto:benny.lay.contact@gmail.com?subject=Inquiry%20from%20Data%20AI%20Portfolio" 
+          href="mailto:benny.lay.contact@gmail.com?subject=Inquiry%20from%20Data%20AI%20Portfolio"
           class="contact-btn email"
         >
-            <i class="fas fa-envelope"></i> Email
+          <i class="fas fa-envelope"></i> Email
         </a>
       </div>
     </section>
