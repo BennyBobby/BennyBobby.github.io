@@ -298,13 +298,30 @@ html {
 .tag-py     { background-color: #3b82f6; }
 .tag-torch  { background-color: #ef4444; }
 .tag-api    { background-color: #0d9488; }
-.tag-front  { background-color: #06b6d4; }
-.tag-data   { background-color: #8b5cf6; }
+.tag-front  { background-color: #ec4899; }
+.tag-data   { background-color: #eab308; }
 .tag-devops { background-color: #475569; }
 .tag-cv     { background-color: #16a34a; }
 .tag-nlp    { background-color: #6366f1; }
 .tag-test   { background-color: #d97706; }
-.tag-optim  { background-color: #f97316; }
+.tag-optim  { background-color: #06b6d4; }
+
+.tags-legend {
+  margin-bottom: 40px;
+  padding: 16px;
+  background: rgba(255, 255, 255, 0.5);
+  border: 1px solid rgba(88, 62, 46, 0.12);
+  border-radius: 16px;
+}
+
+.radar-svg {
+  width: 100%;
+  max-width: 520px;
+  display: block;
+  margin: 0 auto;
+  opacity: 0;
+  transition: opacity 0.8s ease;
+}
 
 @media (max-width: 768px) {
   .navbar {

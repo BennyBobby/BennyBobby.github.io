@@ -75,8 +75,8 @@
         <p>
           I am actively looking for my
           <strong>first permanent position (CDI)</strong> as a
-          <strong>Data Scientist</strong> or <strong>AI Engineer</strong>,
-          as well as a <strong>PhD thesis in Artificial Intelligence</strong>.
+          <strong>Data Scientist</strong> or <strong>ML Engineer</strong>, as
+          well as a <strong>PhD thesis in Artificial Intelligence</strong>.
         </p>
       </div>
     </section>
@@ -84,9 +84,10 @@
     <section id="projets" class="projets-section">
       <div class="projets-container">
         <h1>My Data and AI Projects</h1>
+        <div class="tags-legend" id="tags-legend"></div>
         <div class="projet-card reveal">
           <div class="projet-content">
-            <h2>SotaRAG — RAG Research Assistant</h2>
+            <h2>SotaRAG - RAG Research Assistant</h2>
             <p>
               End-to-end Retrieval-Augmented Generation (RAG) application that
               lets users query scientific literature using natural language. The
@@ -124,7 +125,49 @@
         <hr />
         <div class="projet-card reveal">
           <div class="projet-content">
-            <h2>Age Prediction — Deep Learning Web App</h2>
+            <h2>Local Data Platform - Child Mortality Analysis</h2>
+            <p>
+              End-to-end local data platform built on a
+              <strong>medallion architecture</strong> (Bronze / Silver / Gold)
+              to ingest, transform, and visualize child mortality data from Our
+              World in Data (16,835 rows across 200+ countries).
+            </p>
+            <p>
+              Designed a <strong>MinIO</strong> data lake for raw CSV storage, a
+              <strong>PostgreSQL</strong> data warehouse with staging and gold
+              schemas, and three analytical models built with
+              <strong>dbt</strong> (mortality by country, trend by decade, top
+              10 most improved countries). Wrote 14
+              <strong>dbt data quality tests</strong> (not_null, unique) on
+              sources and gold models. Orchestrated the full pipeline Bronze →
+              Silver → Gold → Test with an <strong>Airflow</strong> DAG,
+              packaged in a custom Docker image. Connected
+              <strong>Metabase</strong> to the gold schema for interactive
+              dashboards.
+            </p>
+            <div class="skill-tags">
+              <span class="tag tag-py">Python</span>
+              <span class="tag tag-py">Pandas</span>
+              <span class="tag tag-devops">Airflow</span>
+              <span class="tag tag-data">dbt</span>
+              <span class="tag tag-data">PostgreSQL</span>
+              <span class="tag tag-devops">MinIO</span>
+              <span class="tag tag-devops">Docker</span>
+              <span class="tag tag-data">Metabase</span>
+            </div>
+            <a
+              href="https://github.com/BennyBobby/data-platform"
+              target="_blank"
+              class="btn-github"
+              ><i class="fab fa-github"></i> check the project</a
+            >
+          </div>
+        </div>
+        <hr />
+
+        <div class="projet-card reveal">
+          <div class="projet-content">
+            <h2>Age Prediction - Deep Learning Web App</h2>
             <p>
               Trained a ConvNeXt-Tiny regression model on the UTKFace dataset to
               predict age from face photos, achieving
@@ -353,7 +396,7 @@
     <section id="contact" class="contact-section">
       <h2>Contact</h2>
       <p class="contact-intro">
-        Open to opportunities — feel free to reach out!
+        Open to opportunities - feel free to reach out!
       </p>
       <div class="contact-links">
         <a
