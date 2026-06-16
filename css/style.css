@@ -306,23 +306,6 @@ html {
 .tag-test   { background-color: #d97706; }
 .tag-optim  { background-color: #06b6d4; }
 
-.tags-legend {
-  margin-bottom: 40px;
-  padding: 16px;
-  background: rgba(255, 255, 255, 0.5);
-  border: 1px solid rgba(88, 62, 46, 0.12);
-  border-radius: 16px;
-}
-
-.radar-svg {
-  width: 100%;
-  max-width: 520px;
-  display: block;
-  margin: 0 auto;
-  opacity: 0;
-  transition: opacity 0.8s ease;
-}
-
 @media (max-width: 768px) {
   .navbar {
     flex-direction: column;
